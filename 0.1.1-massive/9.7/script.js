@@ -25,7 +25,7 @@ for(i = 0; i < goals.length; i++) {
         minNumberOfoals--
     }
 }
-console.log(`Самый результативный матч был под номером ${i+1}. В нем было забито ${minNumberOfoals}`)
+console.log(`Самый не результативный матч был под номером ${i+1}. В нем было забито ${minNumberOfoals}`)
 
 let sum = 0
 goals.reduce((acc, element) => {
