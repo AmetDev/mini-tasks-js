@@ -1,3 +1,4 @@
+
 const math1 = [">", "<", "=", "+", "-", "*", "/"]
 let currArr = [];
 function getMathResult(expression) {
@@ -7,7 +8,8 @@ function getMathResult(expression) {
         }
     })
 }
-getMathResult([300, '-', '200'])
+getMathResult(['300', 'javascript', 'python', 'Elvis', '+', 200]);
+
 let sign;
 let number;
 let intNumber;
@@ -27,34 +29,41 @@ const newTrueArr = currArr.filter((value, index, array) => {
         }
     });
     if(el1 === value) {
-        return value;
+        sign = el1
     }
 })
 const newTrueArr1 = newTrueArr.concat(newCurrArr)
-let index0;
-let index1;
-let index2;
-newTrueArr1.forEach((value, index) => {
-   if(index === 0) {
-    value = index0;
-    
-   }
-    // if(index == 0) {
-    //     index0 = value[0]
-    // }
-    // if (index == 1) {
-    //    index1 = value[1]
-    // }
-    // if(index == index2) {
-    //     index2 = value[2]
-    // }
-})
-console.log(index0, index1, index2)
-
 
 switch(sign) {
     case '-':
-        
-        
-        break;
+        const result1 = newTrueArr1[0] - newTrueArr1[1];
+        console.log(result1)
+    break;
+    case '+':
+        const result2 = newTrueArr1[0] + newTrueArr1[1];
+        console.log(result2)
+    break;
+    case '>':
+        const result3 = newTrueArr1[0] > newTrueArr1[1];
+        console.log(result3)
+    break;
+    case '<':
+        const result4 = newTrueArr1[0] < newTrueArr1[1];
+        console.log(result4)
+    break;
+    case '=':
+        const result5 = newTrueArr1[0] === newTrueArr1[1];
+        console.log(result5)
+    break;
+    case '*':
+        const result6 = newTrueArr1[0] * newTrueArr1[1];
+        console.log(result6)
+    break;
+    case '/':
+        const result7 = newTrueArr1[0] / newTrueArr1[1];
+        console.log(result7)
+    break;
+    default:
+        console.log("Ошибка, сэр!");
 }
+
