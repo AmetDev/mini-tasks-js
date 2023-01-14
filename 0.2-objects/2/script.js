@@ -6,11 +6,14 @@ const people = [
     {id: 4, name: "Виталий"},
 ]
 
-giveTalonsInOrder(people, ordersArr)
-function giveTalonsInOrder(patients, orders) {
-    patients.map((value, index) => {
-       if (value.id === orders) {
-        console.log('true')
-       }
-    })
-}
+
+const giveTalonsInOrder = ((people, ordersArr) => {
+    const reArr = people.reduce((previousValue, currentValue) => {
+        previousValue[currentValue.id] = currentValue
+        return previousValue
+    }, {});
+    return ordersArr.map((value) => reArr[value])
+ })
+
+ const result = giveTalonsInOrder(people, ordersArr)
+ console.log(result)
