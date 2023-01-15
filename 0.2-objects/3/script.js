@@ -2,12 +2,11 @@ const handleObjects = (obj, key, action) => {
     switch(action) {
         case 'get':
             return obj[key];
-        case 'delete': {
+        case 'delete':
             delete obj[key]
             return obj
-        }
         case 'add': 
-            obj[key] = '';
+            obj[key] = 'rust';
             return obj;
         default:
             return obj
@@ -19,5 +18,5 @@ const student = {
 }
 
 
-const result = handleObjects(student, 'programmingLanguage', 'add')
+const result = handleObjects(student, 'programmingLanguage', 'get')
 console.log(result)
