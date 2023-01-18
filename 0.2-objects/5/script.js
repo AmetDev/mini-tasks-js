@@ -3,10 +3,23 @@ const getTotalPriceOfShoppingBag = (shoppingBag) => {
     // console.log(keys)
     // const values = Object.values(shoppingBag)
     // console.log(values['0'].quantity * groceries["Chocolate"].price)
-    if(groceries[""] == shoppingBag.product) {
-        const new1 =groceries[""].price * shoppingBag.quantity;
-        console.log(new1)
-    }
+    //console.log(Object.keys(groceries))
+    Object.values(shoppingBag).map((result) => {
+        console.log(result.product)
+        for (key in groceries) {
+            const name1 = groceries.key;
+            console.log(name1)
+        }
+    });
+
+
+
+   
+
+    // if(Object.keys(groceries) === shoppingBag.product) {
+    //     const new1 =Object.keys(groceries).price * shoppingBag.quantity;
+    //     console.log(new1)
+    // }
 }
 
 const groceries = {
@@ -25,4 +38,4 @@ const shoppingBag = [
     {product: 'Orange Juice', quantity: 23},
 ]
 const totalPrice = getTotalPriceOfShoppingBag(shoppingBag);
-console.log('totalPrice',totalPrice)
+//console.log('totalPrice',totalPrice)
