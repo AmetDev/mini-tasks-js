@@ -5,13 +5,16 @@ const getTotalPriceOfShoppingBag = (shoppingBag) => {
     // console.log(values['0'].quantity * groceries["Chocolate"].price)
     //console.log(Object.keys(groceries))
     Object.values(shoppingBag).map((result) => {
-        console.log(result.product)
-        for (key in groceries) {
-            const name1 = groceries.key;
-            console.log(name1)
-        }
-    });
+        console.log('result',result.product)
+        // for (key in groceries) {
+        //     const keys = groceries[key];
+        //     console.log(keys)
+        // }
 
+    });
+    const result2 = Object.values(groceries);
+    const result3 = Object.values(result2)
+    console.log(result3)
 
 
    
