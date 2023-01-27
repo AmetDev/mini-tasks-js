@@ -13,6 +13,6 @@ class Dictionary {
 }
 
 const dictionary = new Dictionary('Java', 'Number')
-dictionary.add()
-console.log(Dictionary)
+dictionary.add('EXPRESS', 'NODEJS')
+console.log(dictionary)
 
