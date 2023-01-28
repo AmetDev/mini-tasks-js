@@ -10,7 +10,54 @@ class Developer {
        this.techologies.push(techology)
     }
 }
-const developer = new Developer('Amet', '17', 'trainner')
 
-developer.LearnNewTechnology('JavaScript');
-console.log(developer)
+
+class JuniorDeveloper extends Developer {
+    constructor(fullName, age) {
+        super(fullName, age, 'Junior')
+        this.fullName = fullName;
+        this.age = age;
+        this.techologies = ['HTML', 'CSS', 'JavaScript'];
+    };
+    code() {
+        console.log(`Junior разработчик пишет код...`)
+    };
+
+}
+
+class MiddleDeveloper extends Developer {
+    constructor(fullName, age) {
+        super(fullName, age, 'Middle')
+        this.fullName = fullName;
+        this.age = age;
+        this.techologies = ['HTML', 'CSS', 'JavaScript', 'React'];
+    }
+    code(){
+        console.log("Middle разработчик пишет код...")
+    }
+}
+
+class SeniorDeveloper extends Developer {
+    constructor(fullName, age) {
+        super(fullName,age, 'Senior')
+        this.fullName = fullName;
+        this.age = age;
+        this.techologies = ['HTML', 'CSS', 'JavaScript', 'React','NodeJS']
+    }
+    code() {
+        console.log("Senior разработчик пишет код...")
+    }
+}
+
+
+const juniordeveloper = new JuniorDeveloper('Аанастия', 20);
+console.log(juniordeveloper.fullName, juniordeveloper.age, juniordeveloper.position);
+juniordeveloper.code();
+
+const middleDeveloper = new MiddleDeveloper('Игорь', 25);
+console.log(middleDeveloper.fullName, middleDeveloper.age,middleDeveloper.position);
+middleDeveloper.code();
+
+const seniorDeveloper  = new SeniorDeveloper('Максим', 30);
+console.log(seniorDeveloper.fullName, seniorDeveloper.age, seniorDeveloper.position)
+seniorDeveloper.code()
